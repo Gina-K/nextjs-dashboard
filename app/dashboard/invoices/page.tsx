@@ -4,6 +4,7 @@ import { CreateInvoice } from '@/app/ui/invoices/buttons';
 import Table from '@/app/ui/invoices/table';
 import { Suspense } from 'react';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
+import Pagination from '@/app/ui/invoices/pagination';
 
 export default async function Page(props: {
   searchParams?: Promise<{
@@ -30,7 +31,7 @@ export default async function Page(props: {
       </Suspense>
 
       <div className="mt-5 flex w-full justify-center">
-        {/* <Pagination totalPages={totalPages} /> */}
+        <Pagination />
       </div>
     </div>
   );
